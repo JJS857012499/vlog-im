@@ -1,5 +1,5 @@
 /*CIM服务器IP*/
-const CIM_HOST = "127.0.0.1";
+const CIM_HOST = "api.5maoka.com";
 /*
  *服务端 websocket端口
  */
