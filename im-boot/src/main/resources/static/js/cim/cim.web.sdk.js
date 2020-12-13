@@ -4,7 +4,7 @@ const CIM_HOST = "api.5maoka.com";
  *服务端 websocket端口
  */
 const CIM_PORT = 34567;
-const CIM_URI = "ws://" + CIM_HOST + ":" + CIM_PORT;
+const CIM_URI = "wss://" + CIM_HOST + ":" + CIM_PORT;
 
 const APP_VERSION = "1.0.0";
 const APP_CHANNEL = "browser";
