@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <title><@spring.message "module.common.html.title"/></title>
-<link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/css/common.css" />
-<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/js/common.js"></script>
-<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+<link rel="shortcut icon" href="${request.contextPath}/image/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="${request.contextPath}/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="${request.contextPath}/css/common.css" />
+<script type="text/javascript" src="${request.contextPath}/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="${request.contextPath}/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${request.contextPath}/js/common.js"></script>
+<script type="text/javascript" src="${request.contextPath}/js/jquery-ui.min.js"></script>
 
 <script>
 function showMessageDialog(account){
@@ -25,7 +25,7 @@ function doSendMessage(){
        return;
     }
     showProcess("<@spring.message 'module.console.cimsession.sending'/>");
-    $.post("/api/message/send", {content:message,action:2,sender:'system',receiver:account,format:'0'},
+    $.post("${request.contextPath}/api/message/send", {content:message,action:2,sender:'system',receiver:account,format:'0'},
 	   function(data){
 	      hideProcess();
 	      showSTip("<@spring.message 'module.console.cimsession.send.success'/>");
@@ -44,7 +44,7 @@ function doSendMessage(){
 
 	<div class="lay-main-toolbar"></div>
 	<div>
-		<form action="/console/session/list.action" method="post" id="searchForm" >
+		<form action="${request.contextPath}/console/session/list.action" method="post" id="searchForm" >
 			<input type="hidden" name="currentPage" id="currentPage" value="0"/>
 			<table style="width: 100%" class="utable">
 				<thead>
