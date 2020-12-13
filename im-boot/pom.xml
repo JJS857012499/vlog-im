@@ -60,9 +60,11 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <includeSystemScope>true</includeSystemScope>
+                    <mainClass>cn.zd.im.ServerLauncher</mainClass>
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>im-boot</finalName>
     </build>
 
 </project>
